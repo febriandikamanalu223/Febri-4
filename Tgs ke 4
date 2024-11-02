@@ -1,0 +1,34 @@
+#include<iostream>
+#include<iomanip>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    int numSalesman = 10;
+    doube totalCommission = 0.0;
+    
+    for(int i =0;i<numSalesmen;i++)
+           {
+            double salesAmount;
+            cout<<"Enter sales amount for salesman"<<(i+1)<<":";
+            cin>>salesAmount;
+            
+            double commission;
+            if(salesAmount<=500000)
+            {
+              commission = salesAmount * 0.10;
+              } else
+              {
+                   commission = 500000*0.10 + (salesAmount - 500000) * 0.15;
+              }
+              
+              cout<<"Total commission for salesman"<<(i+1)<<":"<<commission <<endl;
+                 totalCommission += commission;
+              }
+              
+              cout<<"Total commission paid by PT. MURAH HARI:"<<totalCommission<<endl;
+              
+              return 0;
+}}
